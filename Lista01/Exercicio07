@@ -1,0 +1,59 @@
+int verde = 4;
+int botao =6;
+int presBotao = 0;
+
+    void setup(){
+        pinMode(verde, OUTPUT);
+        pinMode(botao, INPUT);
+    }
+
+    void loop(){
+        bool estadoBotao = digitalRead(botao); 
+
+        if(estadoBotao==true){
+            presBotao++;
+            }
+      	    switch(presBotao){
+                case 1:
+                digitalWrite(verde, 1);
+                delay(1000/2);
+                digitalWrite(verde, 0);
+                delay(1000);
+              	break;
+				
+              
+                case 2:
+                digitalWrite(verde, 1);
+                delay(1000/3);
+                digitalWrite(verde, 0);
+                delay(1000/3);
+                digitalWrite(verde, 1);
+                delay(1000/3);
+                digitalWrite(verde, 0);
+        		delay(1000/3);
+              	break;
+                
+                case 3:
+              	
+                digitalWrite(verde, 1);
+                delay(1000/9);
+                digitalWrite(verde, 0);
+                delay(1000/9);
+                digitalWrite(verde, 1);
+                delay(1000/9);
+                digitalWrite(verde, 0);
+                delay(1000/9);
+                digitalWrite(verde, 1);
+                digitalWrite(verde, 0);
+                delay(1000/9);
+                digitalWrite(verde, 1);
+                delay(1000/9);
+                digitalWrite(verde, 0);
+                delay(1000/9);
+                digitalWrite(verde, 1);
+                delay(1000/9);
+                digitalWrite(verde, 0);
+       			delay(1000/9);
+                break;
+            }
+    }

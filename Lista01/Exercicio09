@@ -1,0 +1,29 @@
+int verde = 3;
+int botao = 6;
+int botao1 = 4;
+
+void setup(){
+    pinMode(verde, OUTPUT);
+    pinMode(botao, INPUT);
+  	pinMode(botao1, INPUT);
+}
+
+void loop (){
+    bool estadoBotao = digitalRead (botao);
+  	bool estadoBotao1 = digitalRead (botao1);
+  
+  		if (estadoBotao==true && estadoBotao1==false){
+        	digitalWrite (verde, HIGH);
+        }
+  
+    	if (estadoBotao1 == true && estadoBotao==false){
+            digitalWrite (verde, LOW);
+            }               
+  
+        if (estadoBotao1 == true && estadoBotao==true){
+         	digitalWrite(verde, HIGH);
+          	delay (500);
+          	digitalWrite(verde, LOW);
+          	delay (500);
+        }
+}

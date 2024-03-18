@@ -1,0 +1,70 @@
+int vermelho = 3;
+int amarelo = 4;
+int verde = 5;
+
+void setup (){
+    for(int i=3; i<=5; i++){
+        pinMode (i, OUTPUT);
+    }
+}
+
+void loop (){
+    semaforo (vermelho, 5000);
+    semaforo (amarelo, 5000);
+    semaforo (verde, 5000);
+  	
+  	semaforo (vermelho, 4100);
+    semaforo (amarelo, 4100);
+    semaforo (verde, 4100);
+  	
+  	semaforo (vermelho, 3600);
+    semaforo (amarelo, 3600);
+    semaforo (verde, 3600);
+  	  	
+  	semaforo (vermelho, 3000);
+    semaforo (amarelo, 3000);
+    semaforo (verde, 3000);
+  	
+  	semaforo (vermelho, 2600);
+    semaforo (amarelo, 2600);
+    semaforo (verde, 2600);
+  
+  	semaforo (vermelho, 2300);
+    semaforo (amarelo, 2300);
+    semaforo (verde, 2300);
+  
+  	semaforo (vermelho, 2000);
+    semaforo (amarelo, 2000);
+    semaforo (verde, 2000);
+    
+ 	semaforo (vermelho, 1750);
+    semaforo (amarelo, 1750);
+    semaforo (verde, 1750);
+      
+  	semaforo (vermelho, 1500);
+    semaforo (amarelo, 1500);
+    semaforo (verde, 1500);
+      
+  	semaforo (vermelho, 1250);
+    semaforo (amarelo, 1250);
+    semaforo (verde, 1250);
+      
+  	semaforo (vermelho, 1000);
+    semaforo (amarelo, 1000);
+    semaforo (verde, 1000);
+  
+  	semaforo (vermelho, 750);
+    semaforo (amarelo, 750);
+    semaforo (verde, 750);
+  
+  	semaforo (vermelho, 500);
+    semaforo (amarelo, 500);
+    semaforo (verde, 500);
+  
+}
+
+void semaforo (int cor, int tempo){
+    digitalWrite (cor, HIGH);
+    delay (tempo);
+    digitalWrite(cor, LOW);
+}
