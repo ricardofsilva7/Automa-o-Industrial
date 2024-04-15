@@ -1,0 +1,34 @@
+#define VAR A0 
+#define led 8
+
+float iluminacao; 
+float ref; 
+void setup()
+{
+    Serial.begin(9600); 
+    pinMode(led, OUTPUT); 
+    digitalWrite(led, LOW);
+}
+void loop()
+{
+    ref = 0; 
+    for(int i=0; i < 100 ; i++)
+    {
+        iluminacao = analogRead(VAR); 
+        iluminacao = (iluminacao / 1024) * 100;
+        ref = ref + iluminacao;
+    }
+    ref = ref/100; 
+    Serial.print("iluminacao = "); 
+    Serial.print(ref, 0);
+    Serial.println("%"); 
+    if(ref < 30) 
+    {
+        digitalWrite(led,HIGH);
+    }
+else
+    {
+        digitalWrite(led,LOW); 
+    }
+    delay(250);
+}

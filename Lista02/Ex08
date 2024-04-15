@@ -1,0 +1,10 @@
+void setup() {
+Serial.begin(9600);
+}
+void loop()
+{
+int temperatura = temp.getTemp();
+Serial.print("Temperatura no sensor: ");
+Serial.print(temperatura); Serial.println("*C");
+delay(1000);
+}

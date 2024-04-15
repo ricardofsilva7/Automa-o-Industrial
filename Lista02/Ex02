@@ -1,0 +1,18 @@
+int led = 9;
+int ligaLed = 0;
+int oscila = 5; 
+
+void setup()
+{
+    pinMode(led, OUTPUT);
+}
+void loop()
+{
+    analogWrite(led, ligaLed);  
+    ligaLed = ligaLed + oscila;
+    if (ligaLed == 0 || ligaLed == 255) 
+    {
+        oscila = - oscila ;
+    }   
+delay(30);
+}

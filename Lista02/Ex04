@@ -1,0 +1,19 @@
+int BOTAO = 2;
+
+void setup()
+{
+ pinMode(BOTAO, INPUT);
+ Serial.begin(9600); 
+}
+void loop()
+{
+    if(digitalRead(BOTAO))
+    {
+        Serial.println("Botao Ativado\n");
+    }
+    else
+    {
+         Serial.println("Botao Desativado\n");
+    }  
+ delay(300);
+}

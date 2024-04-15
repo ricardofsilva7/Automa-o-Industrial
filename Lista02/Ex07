@@ -1,0 +1,14 @@
+#define potenciPino 0 
+#define ledPino 9 
+int valorPotencial = 0; 
+
+void setup() 
+{
+    pinMode(ledPino,OUTPUT);
+}
+void loop() 
+{
+    valorPotencial = analogRead(potenciPino);
+    valorPotencial = map(valorPotencial,0,1023,0,255); 
+    analogWrite(ledPino,valorPotencial );
+}
